@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.6 on win32)" generated="20231012 20:21:19.319" rpa="false" schemaversion="4">
+<suite id="s1" name="Novo" source="C:\Users\m\Desktop\novo">
+<suite id="s1-s1" name="Preco" source="C:\Users\m\Desktop\novo\preco.robot">
+<test id="s1-s1-t1" name="Browser" line="29">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.amazon.com.br/</arg>
+<arg>${c}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231012 20:21:19.750" level="INFO">Opening browser 'Chrome' to base url 'https://www.amazon.com.br/'.</msg>
+<status status="PASS" starttime="20231012 20:21:19.749" endtime="20231012 20:21:22.992"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231012 20:21:32.994" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20231012 20:21:22.992" endtime="20231012 20:21:32.994"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id="twotabsearchtextbox"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231012 20:21:32.995" endtime="20231012 20:21:33.016"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231012 20:21:34.016" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231012 20:21:33.016" endtime="20231012 20:21:34.017"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="twotabsearchtextbox"]</arg>
+<arg>${f}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231012 20:21:34.018" level="INFO">Typing text 'fone de ouvido jbl t110' into text field '//*[@id="twotabsearchtextbox"]'.</msg>
+<status status="PASS" starttime="20231012 20:21:34.017" endtime="20231012 20:21:34.154"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231012 20:21:35.155" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231012 20:21:34.155" endtime="20231012 20:21:35.156"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>none</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231012 20:21:35.156" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20231012 20:21:35.157" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20231012 20:21:35.157" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20231012 20:21:35.156" endtime="20231012 20:21:36.962"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231012 20:21:37.964" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231012 20:21:36.963" endtime="20231012 20:21:37.964"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${CONDICAO}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>//*[@id="search"]/div[1]/div[1]/div/span[1]/div[1]/div[4]/div/div/div/div/div[1]/span/a/div</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id="search"]/div[1]/div[1]/div/span[1]/div[1]/div[4]/div/div/div/div/div[1]/span/a/div</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20231012 20:21:43.263" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-14.png"&gt;&lt;img src="selenium-screenshot-14.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231012 20:21:43.264" level="FAIL">Element '//*[@id="search"]/div[1]/div[1]/div/span[1]/div[1]/div[4]/div/div/div/div/div[1]/span/a/div' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20231012 20:21:37.965" endtime="20231012 20:21:43.266"/>
+</kw>
+<msg timestamp="20231012 20:21:43.266" level="INFO">${CONDICAO} = False</msg>
+<status status="PASS" starttime="20231012 20:21:37.965" endtime="20231012 20:21:43.266"/>
+</kw>
+<if>
+<branch type="IF" condition="${CONDICAO}">
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20231012 20:21:43.267" endtime="20231012 20:21:43.267"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="search"]/div[1]/div[1]/div/span[1]/div[1]/div[4]/div/div/div/div/div[1]/span/a/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231012 20:21:43.269" endtime="20231012 20:21:43.269"/>
+</kw>
+<status status="NOT RUN" starttime="20231012 20:21:43.266" endtime="20231012 20:21:43.269"/>
+</branch>
+<branch type="ELSE">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="search"]/div[1]/div[1]/div/span[1]/div[1]/div[3]/div/div/div/div/div[1]/span/a/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231012 20:21:43.270" level="INFO">Clicking element '//*[@id="search"]/div[1]/div[1]/div/span[1]/div[1]/div[3]/div/div/div/div/div[1]/span/a/div'.</msg>
+<status status="PASS" starttime="20231012 20:21:43.269" endtime="20231012 20:21:46.207"/>
+</kw>
+<status status="PASS" starttime="20231012 20:21:43.269" endtime="20231012 20:21:46.207"/>
+</branch>
+<status status="PASS" starttime="20231012 20:21:43.266" endtime="20231012 20:21:46.207"/>
+</if>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231012 20:21:47.209" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231012 20:21:46.208" endtime="20231012 20:21:47.209"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${nome}</var>
+<arg>//*[@id="productTitle"]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231012 20:21:47.232" level="INFO">${nome} = Fone De Ouvido Intra-auricular Com Microfone Jbl T110 Preto</msg>
+<status status="PASS" starttime="20231012 20:21:47.210" endtime="20231012 20:21:47.232"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${nome}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231012 20:21:47.233" level="INFO">Fone De Ouvido Intra-auricular Com Microfone Jbl T110 Preto</msg>
+<status status="PASS" starttime="20231012 20:21:47.233" endtime="20231012 20:21:47.234"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231012 20:21:48.234" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231012 20:21:47.234" endtime="20231012 20:21:48.234"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id="corePrice_feature_div"]/div/span[1]/span[2]/span[2]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231012 20:21:48.234" endtime="20231012 20:21:48.255"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231012 20:21:49.257" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231012 20:21:48.256" endtime="20231012 20:21:49.257"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${preco}</var>
+<arg>//*[@id="corePrice_feature_div"]/div/span[1]/span[2]/span[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231012 20:21:49.281" level="INFO">${preco} = 66</msg>
+<status status="PASS" starttime="20231012 20:21:49.258" endtime="20231012 20:21:49.281"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${preco}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231012 20:21:49.283" level="INFO">66</msg>
+<status status="PASS" starttime="20231012 20:21:49.282" endtime="20231012 20:21:49.283"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231012 20:21:50.284" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231012 20:21:49.283" endtime="20231012 20:21:50.284"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://www.magazineluiza.com.br/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231012 20:21:50.286" level="INFO">Opening url 'https://www.magazineluiza.com.br/'</msg>
+<status status="PASS" starttime="20231012 20:21:50.284" endtime="20231012 20:21:53.822"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231012 20:21:54.823" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231012 20:21:53.823" endtime="20231012 20:21:54.823"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id="input-search"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231012 20:21:54.823" endtime="20231012 20:21:54.850"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231012 20:21:55.851" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231012 20:21:54.850" endtime="20231012 20:21:55.851"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="input-search"]</arg>
+<arg>${f}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231012 20:21:55.853" level="INFO">Typing text 'fone de ouvido jbl t110' into text field '//*[@id="input-search"]'.</msg>
+<status status="PASS" starttime="20231012 20:21:55.852" endtime="20231012 20:21:56.796"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231012 20:21:57.797" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231012 20:21:56.796" endtime="20231012 20:21:57.797"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>none</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231012 20:21:57.800" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20231012 20:21:57.800" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20231012 20:21:57.800" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20231012 20:21:57.798" endtime="20231012 20:21:58.524"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231012 20:21:59.526" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231012 20:21:58.525" endtime="20231012 20:21:59.526"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id="__next"]/div/main/section[4]/div[3]/div/ul/li[1]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231012 20:21:59.527" endtime="20231012 20:22:00.609"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231012 20:22:01.611" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231012 20:22:00.610" endtime="20231012 20:22:01.611"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="__next"]/div/main/section[4]/div[3]/div/ul/li[1]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231012 20:22:01.612" level="INFO">Clicking element '//*[@id="__next"]/div/main/section[4]/div[3]/div/ul/li[1]/a'.</msg>
+<status status="PASS" starttime="20231012 20:22:01.612" endtime="20231012 20:22:01.734"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231012 20:22:02.735" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231012 20:22:01.734" endtime="20231012 20:22:02.735"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id="__next"]/div/main/section[2]/div[2]/h1</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231012 20:22:02.735" endtime="20231012 20:22:04.589"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231012 20:22:05.589" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231012 20:22:04.589" endtime="20231012 20:22:05.589"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${nome2}</var>
+<arg>//*[@id="__next"]/div/main/section[2]/div[2]/h1</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231012 20:22:05.612" level="INFO">${nome2} = Fone de Ouvido JBL Intra-Auricular - com Microfone Preto T110</msg>
+<status status="PASS" starttime="20231012 20:22:05.589" endtime="20231012 20:22:05.612"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${nome}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231012 20:22:05.613" level="INFO">Fone De Ouvido Intra-auricular Com Microfone Jbl T110 Preto</msg>
+<status status="PASS" starttime="20231012 20:22:05.613" endtime="20231012 20:22:05.613"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231012 20:22:06.615" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231012 20:22:05.613" endtime="20231012 20:22:06.615"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id="__next"]/div/main/section[4]/div[4]/div/div/div/div/p</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231012 20:22:06.615" endtime="20231012 20:22:06.633"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231012 20:22:07.635" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231012 20:22:06.634" endtime="20231012 20:22:07.635"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${preco2}</var>
+<arg>//*[@id="__next"]/div/main/section[4]/div[4]/div/div/div/div/p</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231012 20:22:07.652" level="INFO">${preco2} = R$ 69,57</msg>
+<status status="PASS" starttime="20231012 20:22:07.635" endtime="20231012 20:22:07.652"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://www.mercadolivre.com.br/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231012 20:22:07.653" level="INFO">Opening url 'https://www.mercadolivre.com.br/'</msg>
+<status status="PASS" starttime="20231012 20:22:07.653" endtime="20231012 20:22:08.817"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231012 20:22:09.818" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231012 20:22:08.817" endtime="20231012 20:22:09.818"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id="cb1-edit"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231012 20:22:09.819" endtime="20231012 20:22:09.838"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231012 20:22:10.838" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231012 20:22:09.838" endtime="20231012 20:22:10.838"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="cb1-edit"]</arg>
+<arg>${f}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231012 20:22:10.839" level="INFO">Typing text 'fone de ouvido jbl t110' into text field '//*[@id="cb1-edit"]'.</msg>
+<status status="PASS" starttime="20231012 20:22:10.839" endtime="20231012 20:22:10.939"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231012 20:22:11.939" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231012 20:22:10.939" endtime="20231012 20:22:11.939"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>none</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231012 20:22:11.940" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20231012 20:22:11.941" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20231012 20:22:11.941" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20231012 20:22:11.939" endtime="20231012 20:22:13.019"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231012 20:22:14.020" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231012 20:22:13.019" endtime="20231012 20:22:14.020"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id=":rj:"]/div[2]/div/div[2]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231012 20:22:14.020" endtime="20231012 20:22:14.157"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231012 20:22:15.157" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231012 20:22:14.157" endtime="20231012 20:22:15.157"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id=":rj:"]/div[2]/div/div[2]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231012 20:22:15.158" level="INFO">Clicking element '//*[@id=":rj:"]/div[2]/div/div[2]/a'.</msg>
+<status status="PASS" starttime="20231012 20:22:15.157" endtime="20231012 20:22:16.103"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231012 20:22:17.105" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231012 20:22:16.103" endtime="20231012 20:22:17.105"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id="ui-pdp-main-container"]/div[1]/div/div[1]/div[2]/div[1]/div/div[2]/h1</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231012 20:22:17.106" endtime="20231012 20:22:17.128"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231012 20:22:18.129" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231012 20:22:17.129" endtime="20231012 20:22:18.129"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${nome3}</var>
+<arg>//*[@id="ui-pdp-main-container"]/div[1]/div/div[1]/div[2]/div[1]/div/div[2]/h1</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231012 20:22:18.149" level="INFO">${nome3} = Fone De Ouvido Intra-auricular Com Fio Tune 110 Preto Jbl</msg>
+<status status="PASS" starttime="20231012 20:22:18.129" endtime="20231012 20:22:18.150"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231012 20:22:19.151" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231012 20:22:18.150" endtime="20231012 20:22:19.151"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id="ui-pdp-main-container"]/div[1]/div/div[1]/div[2]/div[3]/div[1]/div[1]/span/span[3]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231012 20:22:19.151" endtime="20231012 20:22:19.169"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231012 20:22:20.170" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231012 20:22:19.169" endtime="20231012 20:22:20.170"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${preco3}</var>
+<arg>//*[@id="ui-pdp-main-container"]/div[1]/div/div[1]/div[2]/div[3]/div[1]/div[1]/span/span[3]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231012 20:22:20.185" level="INFO">${preco3} = 41</msg>
+<status status="PASS" starttime="20231012 20:22:20.171" endtime="20231012 20:22:20.185"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231012 20:22:20.186" endtime="20231012 20:22:22.420"/>
+</kw>
+<kw name="Create File" library="OperatingSystem">
+<arg>output.txt</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<msg timestamp="20231012 20:22:22.421" level="INFO" html="true">Created file '&lt;a href="file://C:\Users\m\Desktop\novo\output.txt"&gt;C:\Users\m\Desktop\novo\output.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20231012 20:22:22.420" endtime="20231012 20:22:22.421"/>
+</kw>
+<kw name="Append To File" library="OperatingSystem">
+<arg>output.txt</arg>
+<arg>${nome}\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<msg timestamp="20231012 20:22:22.422" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\m\Desktop\novo\output.txt"&gt;C:\Users\m\Desktop\novo\output.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20231012 20:22:22.422" endtime="20231012 20:22:22.423"/>
+</kw>
+<kw name="Append To File" library="OperatingSystem">
+<arg>output.txt</arg>
+<arg>${preco}\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<msg timestamp="20231012 20:22:22.424" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\m\Desktop\novo\output.txt"&gt;C:\Users\m\Desktop\novo\output.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20231012 20:22:22.423" endtime="20231012 20:22:22.424"/>
+</kw>
+<kw name="Append To File" library="OperatingSystem">
+<arg>output.txt</arg>
+<arg>${a}\n\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<msg timestamp="20231012 20:22:22.425" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\m\Desktop\novo\output.txt"&gt;C:\Users\m\Desktop\novo\output.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20231012 20:22:22.424" endtime="20231012 20:22:22.425"/>
+</kw>
+<kw name="Append To File" library="OperatingSystem">
+<arg>output.txt</arg>
+<arg>${nome2}\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<msg timestamp="20231012 20:22:22.426" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\m\Desktop\novo\output.txt"&gt;C:\Users\m\Desktop\novo\output.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20231012 20:22:22.426" endtime="20231012 20:22:22.426"/>
+</kw>
+<kw name="Append To File" library="OperatingSystem">
+<arg>output.txt</arg>
+<arg>${preco2}\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<msg timestamp="20231012 20:22:22.427" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\m\Desktop\novo\output.txt"&gt;C:\Users\m\Desktop\novo\output.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20231012 20:22:22.427" endtime="20231012 20:22:22.427"/>
+</kw>
+<kw name="Append To File" library="OperatingSystem">
+<arg>output.txt</arg>
+<arg>${m}\n\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<msg timestamp="20231012 20:22:22.428" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\m\Desktop\novo\output.txt"&gt;C:\Users\m\Desktop\novo\output.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20231012 20:22:22.428" endtime="20231012 20:22:22.428"/>
+</kw>
+<kw name="Append To File" library="OperatingSystem">
+<arg>output.txt</arg>
+<arg>${nome3}\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<msg timestamp="20231012 20:22:22.429" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\m\Desktop\novo\output.txt"&gt;C:\Users\m\Desktop\novo\output.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20231012 20:22:22.429" endtime="20231012 20:22:22.430"/>
+</kw>
+<kw name="Append To File" library="OperatingSystem">
+<arg>output.txt</arg>
+<arg>${preco3}\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<msg timestamp="20231012 20:22:22.430" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\m\Desktop\novo\output.txt"&gt;C:\Users\m\Desktop\novo\output.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20231012 20:22:22.430" endtime="20231012 20:22:22.432"/>
+</kw>
+<kw name="Append To File" library="OperatingSystem">
+<arg>output.txt</arg>
+<arg>${l}\n</arg>
+<doc>Appends the given content to the specified file.</doc>
+<msg timestamp="20231012 20:22:22.432" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\m\Desktop\novo\output.txt"&gt;C:\Users\m\Desktop\novo\output.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20231012 20:22:22.432" endtime="20231012 20:22:22.432"/>
+</kw>
+<status status="PASS" starttime="20231012 20:21:19.748" endtime="20231012 20:22:22.432"/>
+</test>
+<status status="PASS" starttime="20231012 20:21:19.342" endtime="20231012 20:22:22.433"/>
+</suite>
+<status status="PASS" starttime="20231012 20:21:19.322" endtime="20231012 20:22:22.435"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Novo">Novo</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Preco">Novo.Preco</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
